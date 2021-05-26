@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using operators count++</title>
+	<script>
+		var products=["images/img1.jpg","images/img2.jpg","images/img3.jpg","images/img4.jpg","images/img5.jpg","images/img6.jpg","images/img7.jpg","images/img8.jpg","images/img9.jpg","images/img10.jpg"];
+		var count=0;
+
+
+		function previousClick(){
+			var pic=document.getElementById("pic");
+			count--;
+			pic.src=products[count];
+
+		}
+		function nextClick(){
+			var pic=document.getElementById("pic");
+			count++;
+			pic.src=products[count];
+		}
+	</script>
+</head>
+<body>
+   <div>
+   	<table width="600" border="2" cellspacing="5" align="center">
+   		<tr>
+   			<td>
+   				<input type="button" value="previous" onclick="previousClick()">
+   			</td>
+   			<td>
+   				<img src="images/img1.jpg" width="600" height="300" id="pic">
+   			</td>
+   			<td>
+   				<input type="button" value="next" onclick="nextClick()">
+   			</td>
+   		</tr>
+   	</table>
+   </div>
+</body>
+</html>
